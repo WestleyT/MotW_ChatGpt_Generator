@@ -1,0 +1,33 @@
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.site-header {
+  flex-basis: 100%;
+}
+
+.intro-paragraph {
+  flex-basis: 100%;
+  padding: 2em;
+}
+
+html, body {
+  height : 100%;
+}
+
+body {
+  align-items: flex-start;
+}
