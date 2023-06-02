@@ -27,14 +27,6 @@ table {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
-footer {
-    position : absolute;
-    left : 0;
-    bottom : 0;
-    right : 0;
-    margin-left : 20px;
-}
-
 .spinner {
     position: absolute;
     left: 50%;

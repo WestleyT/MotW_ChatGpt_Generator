@@ -44,11 +44,11 @@ function NpcGenerator() {
         e.preventDefault();
         const content : string = `You are The Keeper in a game of Monster of the Week.
 
-        Design ${bystanderParams.quantity} Bystanders from ${bystanderParams.locationType} in ${bystanderParams.region}. Provide their Name, Age, Trait, Bystander Type, and a brief one to three sentence description of each.
+        Design ${bystanderParams.quantity} Bystanders whose location is ${bystanderParams.locationType} in ${bystanderParams.region}. Provide their Name, Age, Trait, Bystander Type, and a brief one to three sentence description of each.
         
         Possible Bystander Types are: Busybody, Detective, Gossip, Helper, Innocent, Official, Skeptic, Victim, and Witness.
 
-        The description for each bystander should illustrate their personality and include minor details to make them seem real.
+        The description for each bystander should illustrate their personality and include minor details to make them seem real. For example, one bystander's description could be "John Smith, the local carpenter, is friendly and outgoing. In his spare time he enjoys fishing." Occasionally tie in details related to their location. 
 
         Each bystander's name should be their first and last name.
         
@@ -65,7 +65,7 @@ function NpcGenerator() {
             const answer = await openAi.createChatCompletion({
                 model: "gpt-3.5-turbo",
                 messages: [{"role": "user", "content": content}],
-                temperature: 0.2,
+                temperature: 0.5,
             });
             const filteredAnswer = answer?.data?.choices[0]?.message?.content ? answer?.data?.choices[0]?.message?.content : '[]';
             return JSON.parse(filteredAnswer);
@@ -126,9 +126,6 @@ function NpcGenerator() {
                     </tbody>
                 </table>
             }
-            <footer>
-                <p>by Westley Thompson for the C20G Hackathon May 2023 </p>
-            </footer>
         </div>
     )
 }

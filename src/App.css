@@ -31,3 +31,16 @@ html, body {
 body {
   align-items: flex-start;
 }
+
+footer {
+  position : absolute;
+  left : 0;
+  bottom : 0;
+  right : 0;
+  margin-left : 20px;
+  font-size: small;
+}
+
+.footer-p {
+  margin: 0;
+}
