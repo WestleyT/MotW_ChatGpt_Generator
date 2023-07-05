@@ -59,8 +59,7 @@ function NpcGenerator() {
         setBystanders(response);
         setIsLoading(false);
     }
-
-    //adding comment to test Azure updates from GitHub
+    
     const getOpenAiResponse = async (content : string) => {
         try {
             const answer = await openAi.createChatCompletion({
